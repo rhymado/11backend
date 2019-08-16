@@ -1,5 +1,5 @@
-#Backend Batch 11 QuikStart
+# Backend Batch 11 QuikStart
 using ExpressJS and mySQL
 
-#Package
+# Package
 check package.json
