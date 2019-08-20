@@ -4,7 +4,8 @@ require ('dotenv/config'); //metode ke 2 untuk make dotenv
 const express = require ('express'); //import
 const logger = require ('morgan');
 const bodyParser = require ('body-parser');
-const router = require ('./routes');
+
+const rootRouter = require ('./src/Routes/root');
 
 const app = express ();
 const port = process.env.PORT || 8080;
@@ -18,6 +19,6 @@ app.use (logger ('dev'));
 app.use (bodyParser.json ());
 app.use (bodyParser.urlencoded ({extended: false}));
 
-router (app);
+app.use ('/v1', rootRouter);
 
 module.exports = app;
